@@ -18,25 +18,25 @@ def basic_calculator():
 
             if type_of_operation == 1:
                 print("Addition", add(a_value, b_value))
-                check = input("Do you want to calculate again? (y/n): ")
+                check = check_task()
 
                 if check == "n":
                     break
             elif type_of_operation == 2:
                 print("Subtraction", sub(a_value, b_value))
-                check = input("Do you want to calculate again? (y/n): ")
+                check = check_task()
 
                 if check == "n":
                     break
             elif type_of_operation == 3:
                 print("Multiply", multiply(a_value, b_value))
-                check = input("Do you want to calculate again? (y/n): ")
+                check = check_task()
 
                 if check == "n":
                     break
             elif type_of_operation == 4:
                 print("Divide", divide(a_value, b_value))
-                check = input("Do you want to calculate again? (y/n): ")
+                check = check_task()
 
                 if check == "n":
                     break
@@ -56,6 +56,8 @@ def show_menu():
     print("5. Exit")
     print("-----------------------------")
 
+def check_task():
+    return input("Do you want to calculate again? (y/n): ")
 
 def add(a, b):
     return a + b
